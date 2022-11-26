@@ -29,7 +29,17 @@ jobs:
         lfs: true
         submodules: recursive
         token: ${{ secrets.PAT_TOKEN }}
+        fetch-depth: 0
     
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.7
+      with:
+        versionSpec: '5.x'  
+
+    - name: Determine Version
+      id: gitversion
+      uses: gittools/actions/gitversion/execute@v0.9.7
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -80,6 +90,12 @@ jobs:
         path: out/web/*
         # The desired behavior if no files are found using the provided path.
         if-no-files-found: error
+
+    # - name: Release
+    #   uses: ncipollo/release-action@v1
+    #   with:
+    #     artifacts: "release.tar.gz,foo/*.txt"
+    #     bodyFile: "body.md"
 
     # - name: Upload to itch
     #   uses: KikimoraGames/itch-publish@v0.0.3
