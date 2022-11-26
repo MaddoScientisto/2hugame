@@ -1,9 +1,9 @@
 {
-	"x": 16,
-	"y": 0,
+	"x": 336,
+	"y": -288,
 	"width": 160,
-	"height": 144,
-	"iid": "82b82750-5110-11ed-85ab-a747c8eb0ab2",
+	"height": 288,
+	"iid": "195d5830-5110-11ed-b9bf-67250f790dbe",
 	"layers": [
 		"Background.png",
 		"Solid.png",
