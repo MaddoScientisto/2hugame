@@ -1,0 +1,13 @@
+{
+	"x": 176,
+	"y": 0,
+	"width": 320,
+	"height": 144,
+	"iid": "18280ec0-5110-11ed-85ab-e12d8479f9aa",
+	"layers": [
+		"Background.png",
+		"Solid.png",
+		"Foreground.png"
+	],
+	"entities" : {}
+}
